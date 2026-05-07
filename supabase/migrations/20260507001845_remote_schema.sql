@@ -14100,11 +14100,6 @@ CREATE OR REPLACE TRIGGER "brands_search_vector_update" BEFORE INSERT OR UPDATE 
 ALTER TABLE "public"."brands" DISABLE TRIGGER "brands_search_vector_update";
 
 
-
-CREATE OR REPLACE TRIGGER "n8n" AFTER INSERT OR DELETE OR UPDATE ON "public"."brand_tasks" FOR EACH ROW EXECUTE FUNCTION "supabase_functions"."http_request"('https://primary-production-1956b.up.railway.app/webhook/8984a0ff-d27d-4b06-a2c0-83a7b5a70ae1', 'POST', '{"Content-type":"application/json"}', '{}', '5000');
-
-
-
 CREATE OR REPLACE TRIGGER "on_account_insert" AFTER INSERT ON "public"."accounts" FOR EACH ROW EXECUTE FUNCTION "public"."sync_new_account_to_partners"();
 
 ALTER TABLE "public"."accounts" DISABLE TRIGGER "on_account_insert";
