@@ -19,11 +19,6 @@ ALTER SCHEMA "airtable" OWNER TO "postgres";
 
 CREATE EXTENSION IF NOT EXISTS "pg_cron" WITH SCHEMA "pg_catalog";
 
-
-
-
-
-
 CREATE SCHEMA IF NOT EXISTS "harvest hub";
 
 
