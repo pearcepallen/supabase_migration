@@ -14,7 +14,6 @@ SET row_security = off;
 
 CREATE SCHEMA IF NOT EXISTS "airtable";
 
-
 ALTER SCHEMA "airtable" OWNER TO "postgres";
 
 
