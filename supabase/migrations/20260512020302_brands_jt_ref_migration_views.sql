@@ -304,7 +304,7 @@ SET
 WHERE source_table = 'brands'
   AND source_column IN ('status', 'services', 'coverage', 'attention_flags');
 
-UPDATE public.ref_migration_tracker
+UPDATE public.ref_migration_tracker 
 SET
   after_junction_table = CASE source_column
     WHEN 'flag_for_attention'  THEN 'jt_ref_accounts_flag_for_attention'
